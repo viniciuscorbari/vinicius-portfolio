@@ -17,19 +17,16 @@ function ProjectCard({ p }) {
 
       <div className="card__actions">
         {p.liveUrl ? (
-          <a className="linkBtn" href={p.liveUrl} target="_blank" rel="noreferrer">
+          <a
+            className="linkBtn"
+            href={p.liveUrl}
+            target={p.liveUrl.startsWith("http") ? "_blank" : "_self"}
+            rel="noreferrer"
+          >
             Ver online
           </a>
         ) : (
           <span className="linkBtn linkBtn--disabled">Sem link</span>
-        )}
-
-        {p.repoUrl ? (
-          <a className="linkBtn" href={p.repoUrl} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        ) : (
-          <span className="linkBtn linkBtn--disabled">GitHub (opcional)</span>
         )}
       </div>
     </article>
