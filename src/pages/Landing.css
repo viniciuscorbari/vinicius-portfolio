@@ -1,0 +1,144 @@
+.lp{ min-height: 100vh; padding-bottom: 50px; }
+.lp__top{
+  position: sticky; top: 0;
+  background: rgba(11,15,23,0.65);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+}
+.lp__nav{
+  height: 72px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.lp__brand{ display:flex; align-items:center; gap:10px; font-weight: 900; }
+.lp__dot{
+  width:10px; height:10px; border-radius: 50%;
+  background: linear-gradient(90deg, #6366f1, #10b981);
+  box-shadow: 0 0 18px rgba(99,102,241,0.6);
+}
+.lp__navLinks{ display:flex; gap: 12px; flex-wrap: wrap; align-items:center; }
+.lp__navLinks a{ color: var(--muted); padding: 10px 12px; border-radius: 12px; }
+.lp__navLinks a:hover{ color: var(--text); background: rgba(255,255,255,0.06); }
+.lp__back{ border: 1px solid var(--border); }
+
+.lp__main{ padding: 26px 0 0; }
+.lp__hero{
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  padding: 26px 0 12px;
+}
+.lp__heroText h1{
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.8px;
+}
+.lp__heroText h1 span{
+  background: linear-gradient(90deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lp__heroText p{ margin-top: 12px; max-width: 62ch; }
+
+.lp__cta{ display:flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.lp__btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  font-weight: 800;
+  transition: 150ms ease;
+}
+.lp__btn:hover{ background: rgba(255,255,255,0.08); transform: translateY(-1px); }
+.lp__btn--primary{
+  background: linear-gradient(90deg, rgba(99,102,241,0.9), rgba(16,185,129,0.9));
+  border-color: transparent;
+}
+.lp__badges{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.lp__badges span{
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.lp__heroCard{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lp__metric{
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 12px;
+}
+.lp__metricTitle{ font-size: 12px; color: var(--muted); }
+.lp__metricValue{ font-weight: 900; margin-top: 2px; }
+.lp__cardNote{ color: var(--muted); line-height: 1.6; margin-top: 6px; }
+
+.lp__section{ padding: 54px 0 0; }
+.lp__section h2{ font-size: 28px; letter-spacing: -0.3px; }
+.lp__muted{ margin-top: 10px; }
+
+.lp__grid3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.lp__box{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.lp__price{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lp__price--featured{
+  border-color: rgba(99,102,241,0.55);
+  box-shadow: 0 18px 60px rgba(99,102,241,0.12);
+}
+.lp__priceName{ font-weight: 900; }
+.lp__priceValue{ font-size: 28px; font-weight: 1000; letter-spacing: -0.5px; }
+.lp__price ul{ margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.9; }
+
+.lp__faq{ margin-top: 14px; display:flex; flex-direction: column; gap: 10px; }
+.lp__faq details{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+.lp__faq summary{ cursor: pointer; font-weight: 900; }
+.lp__faq p{ margin-top: 8px; }
+
+.lp__footer{ margin-top: 18px; }
+
+@media (max-width: 920px){
+  .lp__hero{ grid-template-columns: 1fr; }
+  .lp__grid3{ grid-template-columns: 1fr; }
+}
